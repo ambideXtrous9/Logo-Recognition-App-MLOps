@@ -9,7 +9,7 @@ jobs:
     name: Build, Push, and Deploy to GCP
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: LogoReco
+      IMAGE_NAME: logoreco
       PROJECT_ID: mlops-437407
       REGION: asia-south1 # Change to your Cloud Run region
       SERVICE_NAME: Logo Recognition # Change to your Cloud Run service name
