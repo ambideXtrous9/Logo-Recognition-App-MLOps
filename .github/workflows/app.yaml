@@ -14,6 +14,7 @@ jobs:
       REGION: asia-south1 # Change to your Cloud Run region
       SERVICE_NAME: logo-recognition # Change to your Cloud Run service name
       PORT : 8501
+      MEMORY : 4Gi
 
     steps:
     - name: Checkout
@@ -50,6 +51,7 @@ jobs:
           --region $REGION \
           --port "${{ env.PORT }}" \
           --set-env-vars GOOGLE_APPLICATION_CREDENTIALS=credentials.json \
+          --memory "${{ env.MEMORY }}"
 
     - name: Set IAM Policy to Allow Public Access
       run: |
