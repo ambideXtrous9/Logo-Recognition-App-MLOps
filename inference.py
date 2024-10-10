@@ -38,7 +38,10 @@ def inference(cnnmodel,image_path):
         st.markdown(f"🚀 Model: **{cnnmodel[0]}**")
         model_details(cnnmodel[1])
         st.markdown(f"🌱 Predicted Class: **{predicted_class}**")
-        st.markdown(f"🎃 Accuracy: **{predprob:.2f}**")
+        
+        if predicted_class != 'None':
+            st.markdown(f"🎃 Accuracy: **{predprob:.2f}**")
+        
         st.markdown(f"🌟 Inference Time: **{inference_time:.4f} seconds**")
             
     else:
