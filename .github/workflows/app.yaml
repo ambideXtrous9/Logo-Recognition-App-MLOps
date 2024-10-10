@@ -27,12 +27,16 @@ jobs:
     - name: Configure Docker Client for GCR
       run: gcloud auth configure-docker --quiet
 
-    - name: Build Docker Image
-      run: docker build -t $IMAGE_NAME:latest .
-
     - name: Write GCP credentials to JSON file
       run: |
         echo "${{ secrets.GCP_SA_KEY }}" > credentials.json
+
+    - name: Build Docker Image
+      run: docker build \
+        --build-arg GOOGLE_APPLICATION_CREDENTIALS=credentials.json \
+        -t $IMAGE_NAME:latest .
+
+    
 
     - name: Push Docker Image to Google Container Registry (GCR)
       run: |
