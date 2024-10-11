@@ -6,9 +6,15 @@ Logo Recognition App MLOps
 
 
 ### **Tech Stack**  
+
 **Web App:** Streamlit
+
 **Model Build:** PyTorch, Google Colab
+
 **Experiment Tracking and Model Registry:** MLflow  
+
 **Data Storage:** Google Storage Bucket
+
 **CI/CD Pieline:** GitHub, GitHub Actions
+
 **Deployment:** Docker, Google Cloud Run, Google Compute Engine
