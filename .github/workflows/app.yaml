@@ -1,8 +1,12 @@
 name: Build, Push, and Deploy Docker Image to Google Cloud Platform
-
+    
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'backup/**'
+      - '**/*.draft.md'
 
 jobs:
   build-push-deploy:
