@@ -11,7 +11,7 @@ CLASS_LABELS = {
     'Unicef': 24, 'Vodafone': 25, 'Yahoo': 26
 }
 
-tracking_uri = "http://34.47.170.249:5000/"
+tracking_uri = "http://35.200.174.226:5000/"
 
 
 INV_LABELS_CLASS = {v: k for k, v in CLASS_LABELS.items()}
